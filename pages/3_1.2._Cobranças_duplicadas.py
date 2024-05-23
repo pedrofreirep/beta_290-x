@@ -154,7 +154,7 @@ df_append_all_amb.loc[:, "mes_utilizacao"] = df_append_all_amb["mes_utilizacao"]
     # quebra_recibos_dez['valor_pago'] = quebra_recibos_dez['valor_pago'].astype(float)
     # st.write(quebra_recibos_dez['valor_pago'].sum())
 
-if filter_date == '2023':
+if filter_date == '2024':
     quebra_recibos_jan_23 = quebra_recibo_jan_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_fev_23 = quebra_recibo_fev_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_mar_23 = quebra_recibo_mar_23_func(media_para_quebra, df_append_all_amb)
@@ -167,19 +167,6 @@ if filter_date == '2023':
     quebra_recibos_out_23 = quebra_recibo_out_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_nov_23 = quebra_recibo_nov_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_dez_23 = quebra_recibo_dez_23_func(media_para_quebra, df_append_all_amb)
-
-    quebra_recibos_jan = quebra_recibo_jan_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_fev = quebra_recibo_fev_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_mar = quebra_recibo_mar_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_abr = quebra_recibo_abr_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_mai = quebra_recibo_mai_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_jun = quebra_recibo_jun_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_jul = quebra_recibo_jul_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_ago = quebra_recibo_ago_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_set = quebra_recibo_set_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_out = quebra_recibo_out_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_nov = quebra_recibo_nov_22_func(media_para_quebra, df_append_all_amb)
-    quebra_recibos_dez = quebra_recibo_dez_22_func(media_para_quebra, df_append_all_amb)
 else:
     quebra_recibos_jan = quebra_recibo_jan_22_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_fev = quebra_recibo_fev_22_func(media_para_quebra, df_append_all_amb)
@@ -193,35 +180,36 @@ else:
     quebra_recibos_out = quebra_recibo_out_22_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_nov = quebra_recibo_nov_22_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_dez = quebra_recibo_dez_22_func(media_para_quebra, df_append_all_amb)
-st.write(df_append_all_amb['ano_utilizacao'].max())
 
-quebra_recibos_jan_23
-quebra_recibos_fev_23
-quebra_recibos_mar_23
-quebra_recibos_abr_23
-quebra_recibos_mai_23
-quebra_recibos_jun_23
-quebra_recibos_jul_23
-quebra_recibos_ago_23
-quebra_recibos_set_23
-quebra_recibos_out_23
-quebra_recibos_nov_23
-quebra_recibos_dez_23
+# st.write(df_append_all_amb['ano_utilizacao'].max())
 
-st.write(df_append_all_amb['ano_utilizacao'].min())
+# quebra_recibos_jan_23
+# quebra_recibos_fev_23
+# quebra_recibos_mar_23
+# quebra_recibos_abr_23
+# quebra_recibos_mai_23
+# quebra_recibos_jun_23
+# quebra_recibos_jul_23
+# quebra_recibos_ago_23
+# quebra_recibos_set_23
+# quebra_recibos_out_23
+# quebra_recibos_nov_23
+# quebra_recibos_dez_23
 
-quebra_recibos_jan
-quebra_recibos_fev
-quebra_recibos_mar
-quebra_recibos_abr
-quebra_recibos_mai
-quebra_recibos_jun
-quebra_recibos_jul
-quebra_recibos_ago
-quebra_recibos_set
-quebra_recibos_out
-quebra_recibos_nov
-quebra_recibos_dez
+# st.write(df_append_all_amb['ano_utilizacao'].min())
+
+# quebra_recibos_jan
+# quebra_recibos_fev
+# quebra_recibos_mar
+# quebra_recibos_abr
+# quebra_recibos_mai
+# quebra_recibos_jun
+# quebra_recibos_jul
+# quebra_recibos_ago
+# quebra_recibos_set
+# quebra_recibos_out
+# quebra_recibos_nov
+# quebra_recibos_dez
 
 
 # quebra_recibos_mar_23
@@ -234,7 +222,7 @@ quebra_recibos_dez
 # quebra_recibos_out_23
 # quebra_recibos_nov_23
 # quebra_recibos_dez_23
-if filter_date == '2023':
+if filter_date == '2024':
     df_append_all_amb['ano_utilizacao'].max()
     total = len(quebra_recibos_jan_23) + len(quebra_recibos_fev_23) + len(quebra_recibos_mar_23) + len(quebra_recibos_abr_23) + len(quebra_recibos_mai_23) + len(quebra_recibos_jun_23) + len(quebra_recibos_jul_23) + len(quebra_recibos_ago_23) + len(quebra_recibos_set_23) + len(quebra_recibos_out_23) + len(quebra_recibos_nov_23) + len(quebra_recibos_dez_23)
     if total == 1:
@@ -280,7 +268,7 @@ if filter_date == '2023':
     else:
         st.info('Nenhum alerta de possível inconsistência foi encontrado para esse período. \n\n**Uma notificação te avisará se algo diferente acontecer.**', icon="🌟")
 
-elif filter_date == '2022':
+elif filter_date == '2023':
     total = len(quebra_recibos_jan) + len(quebra_recibos_fev) + len(quebra_recibos_mar) + len(quebra_recibos_abr) + len(quebra_recibos_mai) + len(quebra_recibos_jun) + len(quebra_recibos_jul) + len(quebra_recibos_ago) + len(quebra_recibos_set) + len(quebra_recibos_out) + len(quebra_recibos_nov) + len(quebra_recibos_dez)
     if total == 1:
         st.write('###### Foi encontrado', total, 'possível quebra de recibo apenas.')
