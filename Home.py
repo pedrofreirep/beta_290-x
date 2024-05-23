@@ -282,7 +282,7 @@ elif filter_date == 'Nov/2022':
 elif filter_date == 'Dez/2022':
     quebra_recibos_dez = quebra_recibo_dez_22_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_dez['valor_pago'] = quebra_recibos_dez['valor_pago'].astype(float)
-elif filter_date == '2023':
+elif filter_date == '2024':
     quebra_recibos_jan_23 = quebra_recibo_jan_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_fev_23 = quebra_recibo_fev_23_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_mar_23 = quebra_recibo_mar_23_func(media_para_quebra, df_append_all_amb)
@@ -571,13 +571,13 @@ elif filter_date == 'Jan/2023':
     f_8_cost_denied = f_8_cost
     f_8_cost_aproved = 1
     f_8_cost_left = f_8_cost - f_8_cost_denied - f_8_cost_aproved
-elif filter_date == '2022':
+elif filter_date == '2023':
     f_8 = len(quebra_recibos_jan) + len(quebra_recibos_fev) + len(quebra_recibos_mar) + len(quebra_recibos_abr) + len(quebra_recibos_mai) + len(quebra_recibos_jun) + len(quebra_recibos_jul) + len(quebra_recibos_ago) + len(quebra_recibos_set) + len(quebra_recibos_out) + len(quebra_recibos_nov) + len(quebra_recibos_dez)
     f_8_cost = quebra_recibos_jan['valor_pago'].sum() + quebra_recibos_fev['valor_pago'].sum() + quebra_recibos_mar['valor_pago'].sum() + quebra_recibos_abr['valor_pago'].sum() + quebra_recibos_mai['valor_pago'].sum() + quebra_recibos_jun['valor_pago'].sum() + quebra_recibos_jul['valor_pago'].sum() + quebra_recibos_ago['valor_pago'].sum() + quebra_recibos_set['valor_pago'].sum() + quebra_recibos_out['valor_pago'].sum() + quebra_recibos_nov['valor_pago'].sum() + quebra_recibos_dez['valor_pago'].sum()
     f_8_cost_denied = 0
     f_8_cost_aproved = 0
     f_8_cost_left = 0
-elif filter_date == '2023':
+elif filter_date == '2024':
     f_8 = len(quebra_recibos_jan_23) + len(quebra_recibos_fev_23) + len(quebra_recibos_mar_23) + len(quebra_recibos_abr_23) + len(quebra_recibos_mai_23) + len(quebra_recibos_jun_23) + len(quebra_recibos_jul_23) + len(quebra_recibos_ago_23) + len(quebra_recibos_set_23) + len(quebra_recibos_out_23) + len(quebra_recibos_nov_23) + len(quebra_recibos_dez_23)
     f_8_cost = quebra_recibos_jan_23['valor_pago'].sum() + quebra_recibos_fev_23['valor_pago'].sum() + quebra_recibos_mar_23['valor_pago'].sum() + quebra_recibos_abr_23['valor_pago'].sum() + quebra_recibos_mai_23['valor_pago'].sum() + quebra_recibos_jun_23['valor_pago'].sum() + quebra_recibos_jul_23['valor_pago'].sum() + quebra_recibos_ago_23['valor_pago'].sum() + quebra_recibos_set_23['valor_pago'].sum() + quebra_recibos_out_23['valor_pago'].sum() + quebra_recibos_nov_23['valor_pago'].sum() + quebra_recibos_dez_23['valor_pago'].sum()
     f_8_cost_denied = 0
@@ -612,7 +612,7 @@ f_9_cost_left = f_9_cost - f_9_cost_denied - f_9_cost_aproved
 f_10 = len(todos_sinistro_repetidos)
 f_10_cost = todos_sinistro_repetidos['valor_pago'].sum()
 
-if filter_date == '2022':
+if filter_date == '2023':
     f_10_cost_denied = 0
     f_10_cost_aproved = 0
 else:
@@ -751,14 +751,14 @@ if total > 0:
 	fig.update_yaxes(secondary_y=True)
 	fig.update_traces(textfont_size=12, cliponaxis=False)
 	
-	if filter_date == '2022':
-		if filter_insurance == 'UFENESP':
-			st.caption('Status das variáveis de auditoria em 2022')
+	if filter_date == '2023':
+		if filter_insurance == 'Unimed':
+			st.caption('Status das variáveis de auditoria em 2023')
 			st.plotly_chart(fig, use_container_width=True)
 
-	if filter_date == '2023':
-		if filter_insurance == 'UFENESP':
-			st.caption('Status das variáveis de auditoria em 2023')
+	if filter_date == '2024':
+		if filter_insurance == 'Unimed':
+			st.caption('Status das variáveis de auditoria em 2024')
 			st.plotly_chart(fig, use_container_width=True)
 
 	# '\n\n'
