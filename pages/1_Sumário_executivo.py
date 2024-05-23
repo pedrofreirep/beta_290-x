@@ -97,9 +97,9 @@ st.sidebar.markdown("# Análise da sinistralidade")
 # filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
 filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
 
-if filter_date == '2022':
-    min_date = pd.to_datetime('2022-01-01')
-    max_date = pd.to_datetime('2022-12-31')
+if filter_date == '2024':
+    min_date = pd.to_datetime('2024-01-01')
+    max_date = pd.to_datetime('2024-12-31')
 elif filter_date == '2023':
     min_date = pd.to_datetime('2023-01-01')
     max_date = pd.to_datetime('2023-12-31')
