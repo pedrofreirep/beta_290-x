@@ -94,8 +94,8 @@ df_append_all['id_pessoa'] = df_append_all['id_pessoa'].astype(int).astype(str)
 # Configurando sidebar
 st.sidebar.markdown("# Análise da sinistralidade")
 
-# filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+# filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 if filter_date == '2024':
     min_date = pd.to_datetime('2024-01-01')

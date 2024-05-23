@@ -80,7 +80,7 @@ st.sidebar.markdown("# Sinistros repetidos")
 
 st.markdown('Neste tópico são classificados todos e quaisquer sinistros que tenham sido realizados pelo mesmo beneficiário, no mesmo dia e pelo mesmo valor, ou seja, que possam levantar suspeita do uso indevido pelo beneficiá em algum contexto.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')

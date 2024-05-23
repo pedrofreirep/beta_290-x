@@ -63,7 +63,7 @@ st.sidebar.markdown("# Códigos sem identificação")
 
 st.markdown('Sinistros sem identificação de algum código TUSS representam sinistros que não estão classificados de acordo com o padrão previsto pela ANS. Códigos que nem sequer receberam alguma outra identificação, também aparecem nessa classificação.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')

@@ -39,7 +39,7 @@ st.sidebar.markdown("# Cobranças duplicadas")
 
 st.markdown('Consultas médicas que repetem o valor pago para o mesmo provedor, em dois meses consecutivos, sendo a soma dos dois valores maior que a média do valor pago por aquele procedimento na base, são alertados como suspeitas por quebras de recibo (caso tal evento tenha sido pago via reembolso) ou possível cobrança da consulta de retorno, contrária à [Resolução nº 1.958/2010](https://sistemas.cfm.org.br/normas/visualizar/resolucoes/BR/2010/1958) do Conselho Federal de Medicina (CFM) por eventualmente não configurar um novo ato profissional.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 
 

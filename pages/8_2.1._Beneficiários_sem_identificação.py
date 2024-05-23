@@ -46,7 +46,7 @@ st.markdown("# Beneficiários sem identificação")
 st.sidebar.markdown("# Beneficiários sem identificação")
 st.markdown('Beneficiários sem identificação representam sinistros que não estão atrelados a um beneficiário, ou seja uma conta ou gasto sem o registro de qualquer usuário.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 if filter_date == 'Mar/2023':
     min_date = '2023-03-01'

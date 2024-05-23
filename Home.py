@@ -98,7 +98,7 @@ st.markdown("A seguir, você encontrará alertas para possíveis inconsistência
 st.sidebar.markdown("# Classificação de gastos ")
 
 # filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023', '2022', 'Período de reajuste', 'Últimos 12 meses', 'Mar/2023', 'Fev/2023', 'Jan/2023', 'Dez/2022', 'Nov/2022', 'Out/2022', 'Set/2022', 'Ago/2022', 'Jul/2022', 'Jun/2022', 'Mai/2022', 'Abr/2022', 'Mar/2022', 'Fev/2022', 'Jan/2022'])
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')
