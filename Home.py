@@ -145,9 +145,9 @@ elif filter_date == 'Fev/2022':
 elif filter_date == 'Jan/2022':
     min_date = pd.to_datetime('2022-01-01')
     max_date = pd.to_datetime('2022-01-31')
-elif filter_date == '2022':
-    min_date = pd.to_datetime('2022-01-01')
-    max_date = pd.to_datetime('2022-12-31')
+elif filter_date == '2024':
+    min_date = pd.to_datetime('2024-01-01')
+    max_date = pd.to_datetime('2024-12-31')
 elif filter_date == '2023':
     min_date = pd.to_datetime('2023-01-01')
     max_date = pd.to_datetime('2023-12-31')
