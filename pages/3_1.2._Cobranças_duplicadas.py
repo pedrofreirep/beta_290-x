@@ -195,6 +195,21 @@ quebra_recibos_out_23
 quebra_recibos_nov_23
 quebra_recibos_dez_23
 
+st.write(df_append_all_amb['ano_utilizacao'].min())
+
+quebra_recibos_jan
+quebra_recibos_fev
+quebra_recibos_mar
+quebra_recibos_abr
+quebra_recibos_mai
+quebra_recibos_jun
+quebra_recibos_jul
+quebra_recibos_ago
+quebra_recibos_set
+quebra_recibos_out
+quebra_recibos_nov
+quebra_recibos_dez
+
 
 # quebra_recibos_mar_23
 # quebra_recibos_abr_23
