@@ -181,6 +181,21 @@ else:
     quebra_recibos_nov = quebra_recibo_nov_22_func(media_para_quebra, df_append_all_amb)
     quebra_recibos_dez = quebra_recibo_dez_22_func(media_para_quebra, df_append_all_amb)
 st.write(df_append_all_amb['ano_utilizacao'].max())
+
+quebra_recibos_jan_23
+quebra_recibos_fev_23
+quebra_recibos_mar_23
+quebra_recibos_abr_23
+quebra_recibos_mai_23
+quebra_recibos_jun_23
+quebra_recibos_jul_23
+quebra_recibos_ago_23
+quebra_recibos_set_23
+quebra_recibos_out_23
+quebra_recibos_nov_23
+quebra_recibos_dez_23
+
+
 # quebra_recibos_mar_23
 # quebra_recibos_abr_23
 # quebra_recibos_mai_23
