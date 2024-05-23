@@ -70,7 +70,7 @@ def get_data_4():
 
 df_subgrupo = get_data_4()
 
-df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "0000MS2B"].index)
+df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "591734"].index)
 df_append_all["cod_tuss"] = df_append_all["cod_tuss"].astype(int).astype(str)
 df_subgrupo["cod_tuss"] = df_subgrupo["cod_tuss"].astype(int).astype(str)
 proc_describe["cod_tuss"] = proc_describe["cod_tuss"].astype(int).astype(str)

@@ -36,7 +36,7 @@ df_append_all = get_data_1()
 
 
 # df_append["cod_tuss"] = df_append["cod_tuss"].astype(int).astype(str)
-df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "0000MS2B"].index)
+df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "591734"].index)
 df_append_all["cod_tuss"] = df_append_all["cod_tuss"].astype(int).astype(str)
 
 # df_append["dt_utilizacao"] = pd.to_datetime(df_append['dt_utilizacao'], format='mixed')

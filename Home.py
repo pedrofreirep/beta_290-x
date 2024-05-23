@@ -65,7 +65,7 @@ def get_data_4():
 
 df_subgrupo = get_data_4()
 
-df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "0000MS2B"].index)
+df_append_all = df_append_all.drop(df_append_all[df_append_all.cod_tuss == "591734"].index)
 df_append_all["cod_tuss"] = df_append_all["cod_tuss"].astype(int).astype(str)
 
 df_subgrupo["cod_tuss"] = df_subgrupo["cod_tuss"].astype(int).astype(str)
@@ -88,7 +88,7 @@ df_append_all['operadora'] = df_append_all['operadora'].astype(str)
 df_append_all['id_pessoa'] = df_append_all['id_pessoa'].astype(int).astype(str)
 
 
-st.markdown("# 🏢 Louis Dreyfus Company Brasil")
+st.markdown("# 🏢 Grupo Zema")
 st.markdown("### Classificação de gastos com o plano de saúde - Beta 🏗️")
 
 st.markdown("A seguir, você encontrará alertas para possíveis inconsistências com o uso do plano de saúde. Na aba a direita, você conseguirá se aprofundar em cada um dos tópicos de atenção indicados abaixo. **Aproveite as classificações para fazer uma saúde diferente!**")
