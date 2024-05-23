@@ -20,14 +20,14 @@ conn = st.experimental_connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/4 - Carregando base completa...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
-    return conn.read("df-for-mvps/6/274/jan-2024/df_append_all.csv", input_format="csv")
+    return conn.read("df-for-mvps/6/290/mai-2024/df_append_all.csv", input_format="csv")
 #     return pd.read_csv("../dados/df_append_all.csv")
 
 df_append_all = get_data_1()
 
 # @st.cache_data(ttl=3600, show_spinner="2/4 - Carregando histórico...") #Ler base com a classificação TUSS da ANS
 # def get_data_2():
-#     return conn.read("df-for-mvps/6/274/jan-2024/df_append.csv", input_format="csv")
+#     return conn.read("df-for-mvps/6/290/mai-2024/df_append.csv", input_format="csv")
 # #     return pd.read_csv('../dados/df_append.csv')
     
 # df_append = get_data_2()
@@ -72,7 +72,7 @@ st.sidebar.markdown("# Sessões acima do comum")
 
 st.markdown('Quando o número de sessões de psicoterapia ou fonoaudiologia ultrapassar o limite de 48 sessões ou 18 sessões, respectivamente, no ano e para o mesmo beneficiário, você encontrará nesta aba.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')
@@ -133,7 +133,7 @@ image = conn.open("df-for-mvps/6/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=110)
 
-image = conn.open("df-for-mvps/6/274/img/logo.png", input_format="png")
+image = conn.open("df-for-mvps/6/290/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=50)
 

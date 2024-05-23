@@ -23,14 +23,14 @@ conn = st.experimental_connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/4 - Carregando base completa...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
-    return conn.read("df-for-mvps/6/274/jan-2024/df_append_all.csv", input_format="csv")
+    return conn.read("df-for-mvps/6/290/mai-2024/df_append_all.csv", input_format="csv")
 #     return pd.read_csv("../dados/df_append_all.csv")
 
 df_append_all = get_data_1()
 
 # @st.cache_data(ttl=3600, show_spinner="2/4 - Carregando histórico...") #Ler base com a classificação TUSS da ANS
 # def get_data_2():
-#     return conn.read("df-for-mvps/6/274/jan-2024/df_append.csv", input_format="csv")
+#     return conn.read("df-for-mvps/6/290/mai-2024/df_append.csv", input_format="csv")
 # #     return pd.read_csv('../dados/df_append.csv')
     
 # df_append = get_data_2()
@@ -39,7 +39,7 @@ df_append_all = get_data_1()
 
 @st.cache_data(ttl=3600, show_spinner="3/4 - Analisando procedimentos...") #Ler base com a classificação TUSS da ANS
 def get_data_3():
-    return conn.read("df-for-mvps/6/274/jan-2024/proc_describe.csv", input_format="csv")
+    return conn.read("df-for-mvps/6/290/mai-2024/proc_describe.csv", input_format="csv")
 #     return pd.read_csv('/Users/pedro/Documents/Blue/ds/df_sulamerica_describe.csv')
     
 proc_describe = get_data_3()
@@ -80,7 +80,7 @@ st.sidebar.markdown("# Sinistros repetidos")
 
 st.markdown('Neste tópico são classificados todos e quaisquer sinistros que tenham sido realizados pelo mesmo beneficiário, no mesmo dia e pelo mesmo valor, ou seja, que possam levantar suspeita do uso indevido pelo beneficiá em algum contexto.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')
@@ -149,7 +149,7 @@ image = conn.open("df-for-mvps/6/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=110)
 
-image = conn.open("df-for-mvps/6/274/img/logo.png", input_format="png")
+image = conn.open("df-for-mvps/6/290/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=50)
 

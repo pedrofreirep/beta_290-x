@@ -37,7 +37,7 @@ conn = st.experimental_connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/3 - Carregando base completa (142 MB)...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
-    return conn.read("df-for-mvps/6/274/jan-2024/df_append_all.csv", input_format="csv")
+    return conn.read("df-for-mvps/6/290/mai-2024/df_append_all.csv", input_format="csv")
 #     return pd.read_csv("../dados/df_append_all.csv")
 
 df_append_all = get_data_1()
@@ -45,14 +45,14 @@ df_append_all = get_data_1()
 
 @st.cache_data(ttl=3600, show_spinner="2/3 - Analisando procedimentos...") #Ler base com a classificação TUSS da ANS
 def get_data_3():
-    return conn.read("df-for-mvps/6/274/jan-2024/proc_describe.csv", input_format="csv")
+    return conn.read("df-for-mvps/6/290/mai-2024/proc_describe.csv", input_format="csv")
 #     return pd.read_csv('/Users/pedro/Documents/Blue/ds/df_sulamerica_describe.csv')
     
 proc_describe = get_data_3()
 
-# df_append_all = conn.read("df-for-mvps/6/274/jan-2024/df_append_all.csv", input_format="csv")
-# df_append = conn.read("df-for-mvps/6/274/jan-2024/df_append.csv", input_format="csv")
-# proc_describe = conn.read("df-for-mvps/6/274/jan-2024/proc_describe.csv", input_format="csv")
+# df_append_all = conn.read("df-for-mvps/6/290/mai-2024/df_append_all.csv", input_format="csv")
+# df_append = conn.read("df-for-mvps/6/290/mai-2024/df_append.csv", input_format="csv")
+# proc_describe = conn.read("df-for-mvps/6/290/mai-2024/proc_describe.csv", input_format="csv")
 
 proc_describe = proc_describe.iloc[1:]
 
@@ -98,7 +98,7 @@ st.markdown("A seguir, você encontrará alertas para possíveis inconsistência
 st.sidebar.markdown("# Classificação de gastos ")
 
 # filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023', '2022', 'Período de reajuste', 'Últimos 12 meses', 'Mar/2023', 'Fev/2023', 'Jan/2023', 'Dez/2022', 'Nov/2022', 'Out/2022', 'Set/2022', 'Ago/2022', 'Jul/2022', 'Jun/2022', 'Mai/2022', 'Abr/2022', 'Mar/2022', 'Fev/2022', 'Jan/2022'])
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2023'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=['2024', '2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')
@@ -173,7 +173,7 @@ image = conn.open("df-for-mvps/6/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=110)
 
-image = conn.open("df-for-mvps/6/274/img/logo.png", input_format="png")
+image = conn.open("df-for-mvps/6/290/img/logo.png", input_format="png")
 image = Image.open(image)
 st.sidebar.image(image, width=50)
 

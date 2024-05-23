@@ -6,7 +6,7 @@ from st_files_connection import FilesConnection
 def proc_preco_nivel_provedor_func():
     # 5 Analisando o padrão do preço de procedimentos
     conn = st.experimental_connection('s3', type=FilesConnection)
-    proc_preco_nivel_provedor = conn.read("df-for-mvps/6/274/jan-2024/proc_preco_nivel_provedor.csv", input_format="csv").iloc[1:]
+    proc_preco_nivel_provedor = conn.read("df-for-mvps/6/290/mai-2024/proc_preco_nivel_provedor.csv", input_format="csv").iloc[1:]
     proc_preco_nivel_provedor.columns = ["new_index", "provedor", "cod_tuss", "qtd_realizacoes", "média", "desvio_padrão", "min", "q1", "q2", "q3", "max"]
 
     # Classificando o tipo de cada variável
